@@ -2,6 +2,9 @@ import Header from "./components/Header";
 import VideoPlayer from "./components/VideoPlayer";
 import AboutSection from "./components/AboutSection";
 import WhyChooseUs from "./components/WhyChooseUs";
+import OurServices from "./components/OurServices";
+import HowWeDoIt from "./components/HowWedoIt";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <VideoPlayer />
       <AboutSection />
       <WhyChooseUs />
+      <OurServices />
+      <HowWeDoIt />
+      <Footer />
     </div>
   );
 }

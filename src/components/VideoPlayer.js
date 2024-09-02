@@ -3,7 +3,7 @@ import Conveyer from "../assects/Conveyer.mp4";
 
 function VideoPlayer() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden">
       <video
         autoPlay
         muted
