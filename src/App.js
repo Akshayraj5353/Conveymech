@@ -1,11 +1,16 @@
 import Header from "./components/Header";
-import image from "./assects/image.jpg";
+import VideoPlayer from "./components/VideoPlayer";
+import AboutSection from "./components/AboutSection";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 function App() {
   return (
     <div>
       <Header />
-      <img className="" alt="logo" src={image} />
+      {/* <img className="w-screen p-1" alt="logo" src={image} /> */}
+      <VideoPlayer />
+      <AboutSection />
+      <WhyChooseUs />
     </div>
   );
 }
