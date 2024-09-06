@@ -1,5 +1,5 @@
 import React from "react";
-import image3 from "../assects/image3.jpeg"; // Replace with your image path
+import image3 from "../assects/image3.jpeg";
 
 function AboutSection() {
   return (

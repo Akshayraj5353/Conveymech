@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assects/logo.jpeg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,12 +10,32 @@ function Header() {
         <div className="flex items-center">
           <img className="h-16 w-16" alt="logo" src={logo} />
         </div>
-        <nav>
+
+        {/* Hamburger Icon for Mobile */}
+        <div className="md:hidden">
+          <button id="menu-btn" className="text-white focus:outline-none">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="hidden md:flex">
           <ul className="flex space-x-8 text-white">
+            {/* Menu Items */}
             <li className="group relative">
-              <a href="#" className="hover:text-gray-300">
-                Home
-              </a>
+              <Link to="/">Home</Link>
             </li>
             <li className="group relative">
               <a href="#" className="hover:text-gray-300">
@@ -37,12 +58,12 @@ function Header() {
                   {/* Nested Submenu */}
                   <ul className="absolute hidden group-hover:block bg-gray-700 border border-gray-600 rounded-md p-2 space-y-2 mt-1 left-full top-0 w-48 shadow-lg">
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        to="/manual-systems"
                         className="block px-4 py-2 hover:bg-gray-600 hover:text-white rounded-md"
                       >
                         Manual System
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
@@ -157,124 +178,49 @@ function Header() {
           </ul>
         </nav>
       </div>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden">
+        <ul className="flex flex-col space-y-2 mt-2 text-white">
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              Partners
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              Project Videos
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-300">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
 
 export default Header;
-// import React from "react";
-// import logo from "../assects/logo.jpeg";
-
-// function Header() {
-//   return (
-//     <div>
-//       <ul>
-//         <li>Home</li>
-//         <li>About</li>
-//         <li>Products</li>
-
-//         <ul>
-//           <li>
-//             Truck Loading Conveyors
-//             <ul>
-//               <li>
-//                 <a>Manual System</a>
-//               </li>
-//               <li>
-//                 <a>Hydraulic System</a>
-//               </li>
-//               <li>
-//                 <a>Telescopic System</a>
-//               </li>
-//             </ul>
-//           </li>
-//           <li>
-//             <a>Flat Belt conveyors</a>
-//             <ul>
-//               <li>
-//                 <a>PVC belt conveyors</a>
-//               </li>
-//               <li>
-//                 <a>PU belt conveyors</a>
-//               </li>
-//             </ul>
-//           </li>
-//           <li>
-//             <a>Modular Belt conveyors</a>
-//           </li>
-//           <li>
-//             <a>Slat chain conveyors</a>
-//             <ul>
-//               <li>
-//                 <a>Two-Row conveyors</a>
-//               </li>
-//               <li>
-//                 <a>Three-Row conveyors</a>
-//               </li>
-//               <li>
-//                 <a>Thermo Plastic Chain conveyors</a>
-//               </li>
-//             </ul>
-//           </li>
-//           <li>
-//             <a>Flexible chain conveyors</a>
-//             <ul>
-//               <li>
-//                 <a>Flexible Roller conveyors</a>
-//               </li>
-//               <li>
-//                 <a>Skate Wheel conveyors</a>
-//               </li>
-//             </ul>
-//           </li>
-//           <li>
-//             <a>Roller conveyors</a>
-//             <ul>
-//               <li>
-//                 <a>Gravity Roller conveyors</a>
-//               </li>
-//               <li>
-//                 <a>Powerised Wheel conveyors</a>
-//               </li>
-//             </ul>
-//           </li>
-//           <li>
-//             <a>Bag Stacking conveyors</a>
-//           </li>
-//           <li>
-//             <a>Stiching conveyors</a>
-//           </li>
-//           <li>
-//             <a>Inclined conveyors</a>
-//           </li>
-//           <li>
-//             <a>Wire Mesh Chain conveyors</a>
-//           </li>
-//           <li>
-//             <a>Turn Table conveyors</a>
-//           </li>
-//           <li>
-//             <a>Coding Conveyors</a>
-//           </li>
-//           <li>
-//             <a>Crate Washing Conveyors</a>
-//           </li>
-//         </ul>
-//         <li>
-//           <a href="#">Services</a>
-//         </li>
-//         <li>
-//           <a href="#">Partners </a>
-//         </li>
-//         <li>
-//           <a>Project Vedios</a>
-//         </li>
-//         <li>
-//           <a>Contact Us</a>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default Header;
